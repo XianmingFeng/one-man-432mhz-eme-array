@@ -61,7 +61,34 @@ The H-frame used to stack the four Yagis is designed for tool-less, rapid deploy
 
 The basic design of the 14-element Yagi is based on the **GTV 70-14m by DG7YBN**.
 
-However, this project introduces significant modifications to the original design to optimize it for portability and rapid assembly. These optimizations include:
+#### Electrical Design & Boom Correction
+
+The electrical design adopts the data from DG7YBN and applies a Boom Correction (BC) factor to compensate for the effects of the conductive 20x20x1mm square aluminum boom. The elements are mounted 5mm above the boom (distance from the element's bottom to the boom's top surface).
+
+The table below shows the original NEC free-space length (FL NEC), the final boom-corrected length (BC), and the required half-length (Half L) for element construction.
+
+| \[mm\] | Diam | Pos Boom | FL NEC | BC | Half L |
+| :---- | :---- | :---- | :---- | :---- | :---- |
+| Refl | 8 | 40 | 328 | 330.7 | 165.35 |
+| DE | 10 | 144.5 | 313.4 | 316.1 | 158.05 |
+| D1 | 8 | 193 | 309 | 311.7 | 155.85 |
+| D2 | 8 | 286 | 304 | 306.7 | 153.35 |
+| D3 | 8 | 468 | 292 | 294.7 | 147.35 |
+| D4 | 8 | 681 | 286 | 288.7 | 144.35 |
+| D5 | 8 | 928 | 282 | 284.7 | 142.35 |
+| D6 | 8 | 1192 | 279 | 281.7 | 140.85 |
+| D7 | 8 | 1477 | 274.5 | 277.2 | 138.6 |
+| D8 | 8 | 1764 | 271 | 273.7 | 136.85 |
+| D9 | 8 | 2054 | 268 | 270.7 | 135.35 |
+| D10 | 8 | 2345 | 266 | 268.7 | 134.35 |
+| D11 | 8 | 2627 | 264 | 266.7 | 133.35 |
+| D12 | 8 | 2860 | 256 | 258.7 | 129.35 |
+
+For a detailed explanation of the Boom Correction methodology, please visit [DG7YBN's BC page](https://dg7ybn.de/BC_numbers/BC.htm).
+
+#### Mechanical Optimizations
+
+In addition to the electrical design, this project introduces significant *mechanical* modifications to the original design to optimize it for portability and rapid assembly. These optimizations include:
 * Redesigned boom segments.
 * Modified element brackets.
 * A new feedbox design.
@@ -81,6 +108,7 @@ All design files are located in the `/CAD` directory.
 
 * **Available Now:**
     * Initial 3D CAD files (`.step`) for all 3D printed parts and aluminum components are available in the `/CAD` directory.
+    * Electrical design data (element lengths and positions) are in this README.
 * **To Be Added:**
     * Complete Bill of Materials (BOM) (e.g., specific aluminum pipe sizes, screws, rivets).
     * Detailed Assembly Instructions & Photos/Videos.
@@ -89,9 +117,8 @@ All design files are located in the `/CAD` directory.
 
 ## Acknowledgements
 
-* **DG7YBN** for the original GTV 70-14m antenna design.
+* **DG7YBN** for the original GTV 70-14m antenna design and Boom Correction methodology.
 * **BI1QGX** for the foundational concept of the folding H-frame.
-
 
 ## License
 
