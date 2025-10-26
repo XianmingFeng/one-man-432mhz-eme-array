@@ -1,0 +1,83 @@
+# Portable 432MHz (70cm) EME Yagi Array
+
+**A lightweight, tool-less, single-person-portable 2x2x14-element Yagi array for 432 MHz EME operations.**
+
+---
+
+## Overview
+
+This project provides an open-source design for a 432 MHz (70cm) EME (Earth-Moon-Earth) antenna array. Traditional EME arrays are often large, heavy, and permanently installed to achieve maximum gain. This design, however, focuses on a different goal: achieving the minimum required gain for EME while prioritizing **portability, light weight, and rapid, single-person operation.**
+
+The entire system is designed for amateur radio operators who wish to conduct EME operations in the field, away from a home station.
+
+## Key Features
+
+* **Single-Person Portability:** The total weight of the entire array system, including the carrying bag, is **under 10 kg**.
+* **Compact Storage:** All components are designed to be stored in a single fishing rod bag, making it easy for one person to carry.
+* **Tool-less Assembly:** No tools (screwdrivers, wrenches, etc.) are required for field setup or teardown. The entire process can be completed by hand.
+* **Rapid Deployment & Takedown:** The design is optimized for speed. This is achieved by:
+    * Minimizing the number of loose parts.
+    * Keeping most components connected as a single unit during storage.
+    * Utilizing a simple "unfold-and-lock" and "unlock-and-fold" mechanism for deployment and retraction.
+
+## Design Philosophy: Accessibility & Low Cost
+
+A primary goal of this project is to enable anyone to easily build this antenna system. The design intentionally avoids complex machining processes (like CNC milling) to lower the barrier to entry.
+
+Builders should be able to complete the entire antenna with only the most basic tools:
+* Hand drill (pistol drill)
+* Hand saw
+* Manual rivet gun
+* 3D Printer
+
+**A note on 3D Printers:** We understand that not everyone owns a 3D printer. However:
+1.  The accessibility and affordability of a home 3D printer are significantly higher than that of a home CNC machine.
+2.  Even if you don't own one, using a 3D printing service is vastly more cost-effective and accessible than commissioning CNC machined parts.
+
+## Technical Specifications
+
+* **Band:** 432 MHz (70cm)
+* **Array Configuration:** 2x2x14-element Yagi array (Four 14-element Yagis stacked in a 2x2 grid).
+* **Polarization:** Horizontal.
+* **Stacking Frame:** Custom H-frame.
+
+## Design Details
+
+### H-Frame Stacking System
+
+The H-frame used to stack the four Yagis is designed for tool-less, rapid deployment. Its design is inspired by the folding leg mechanism of a portable table. This concept allows the frame to be deployed and locked into place, or unlocked and folded for storage, in seconds.
+
+*The initial idea for this folding H-frame concept came from **BI1QGX**.*
+
+### Modified 14-Element Yagi
+
+The basic design of the 14-element Yagi is based on the **GTV 70-14m by DG7YBN**.
+
+However, this project introduces significant modifications to the original design to optimize it for portability and rapid assembly. These optimizations include:
+* Redesigned boom segments.
+* Modified element brackets.
+* A new feedbox design.
+
+These changes make the antenna elements easier to pack and quicker to assemble in the field without sacrificing performance.
+
+## Project Status
+
+This README is a work in progress. More details, including [Bill of Materials (BOM)], [3D Printable Files (.stl)], [Assembly Instructions], [Simulation Files (e.g., EZNEC/4nec2)], and [Photos/Videos of deployment] will be added as the project progresses.
+
+## Acknowledgements
+
+* **DG7YBN** for the original GTV 70-14m antenna design.
+* **BI1QGX** for the foundational concept of the folding H-frame.
+
+## License
+
+Shield: [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
+
+This work is licensed under a
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
+
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
+
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
+[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
