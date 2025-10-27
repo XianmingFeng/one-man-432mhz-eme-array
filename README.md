@@ -38,6 +38,7 @@ Builders should be able to complete the entire antenna with only the most basic 
 * Hand drill (pistol drill)
 * Hand saw
 * Manual rivet gun
+* Pipe bender
 * 3D Printer (All required `.step` files are available in the [`/CAD/3d_print`](/CAD/3d_print) directory)
 
 **A note on 3D Printers:** We understand that not everyone owns a 3D printer. However:
@@ -50,6 +51,25 @@ Builders should be able to complete the entire antenna with only the most basic 
 * **Array Configuration:** 2x2x14-element Yagi array (Four 14-element Yagis stacked in a 2x2 grid).
 * **Polarization:** Horizontal.
 * **Stacking Frame:** Custom H-frame.
+
+## Mounting System (Tripod)
+
+The array system is designed to be mounted on a standard tripod. The connection is made using the 3D printed part **`spearder_mount`** (files available in `/CAD/3d_print`).
+
+This mount connects the array's H-frame to a tripod head's quick-release (QR) plate.
+
+**Quick-Release Plate Requirements:**
+The `spearder_mount` part is designed to be versatile. It is compatible with any long-slot style QR plate that meets these criteria:
+* **Length:** Greater than 80mm.
+* **Mounting:** Uses a long slot for the bolt (not a single fixed-position hole).
+* **Bolt:** Compatible with a standard 1/4" (imperial) tripod bolt.
+
+*As an example, the author uses a 38mm wide Arca-Swiss style QR plate paired with a fluid video head.*
+
+**Tripod Recommendation:**
+It is highly recommended to use a tripod with a **minimum height of 1.8 meters (approx. 6 feet)**.
+
+* **Reason:** A tripod that is too short will cause the tail end of the antenna array to hit or drag on the ground when rotating to high elevation angles (e.g., tracking the moon).
 
 ## Design Details
 
@@ -91,11 +111,20 @@ For a detailed explanation of the Boom Correction methodology, please visit [DG7
 #### Mechanical Optimizations
 
 In addition to the electrical design, this project introduces significant *mechanical* modifications to the original design to optimize it for portability and rapid assembly. These optimizations include:
-* Redesigned boom segments.
-* Modified element brackets.
+* Redesigned boom segments and folding hinges.
 * A new feedbox design.
+* A specialized element mounting system (see below).
 
-These changes make the antenna elements easier to pack and quicker to assemble in the field without sacrificing performance.
+#### Element Mount (The `element_mount` part)
+
+A key feature of this design is the 3D-printed element mount (`element_mount.step`) used for all parasitic elements (reflectors and directors).
+
+* **Dual-Slot Design:** The part features two slots. One slot holds the element perpendicular to the boom for operation. A second slot, at a near-perpendicular angle, is used to hold the element in its folded (stowed) position.
+* **Interference-Free Storage:** The "storage" slot is intentionally offset by a small angle (the `parking_angle`). This ensures that when folded, the elements do not lie perfectly parallel to the boom, preventing them from interfering with adjacent elements or the mounting bolt heads.
+* **General-Purpose Parametric Design:** This element mount is a universal, general-purpose design, suitable for many Yagi projects using square booms and round elements. It has been released as its own **parametric OpenSCAD project**.
+
+For full details, parameters (to adapt it for your own boom size, element diameter, storage angle, etc.), and `.scad` files, please see the dedicated project repository:
+**[https://github.com/XianmingFeng/yagi_element_mounting](https://github.com/XianmingFeng/yagi_element_mounting)**
 
 ## Bill of Materials (BOM)
 
