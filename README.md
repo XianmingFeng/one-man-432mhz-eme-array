@@ -52,6 +52,22 @@ Builders should be able to complete the entire antenna with only the most basic 
 * **Polarization:** Horizontal.
 * **Stacking Frame:** Custom H-frame.
 
+### Theoretical Performance (Simulated)
+
+**Single 14-el Yagi:**
+* **Gain:** 16.38 dBi
+* **Front-to-Back Ratio:** 33.02 dB
+* **3dB Beamwidth (Horizontal):** 30.8°
+* **3dB Beamwidth (Vertical):** 29.2°
+
+**Full 2x2 Array:**
+* **Gain:** 22.32 dBi
+* **Front-to-Back Ratio:** 33.29 dB
+* **3dB Beamwidth (Horizontal):** 14°
+* **3dB Beamwidth (Vertical):** 13.2°
+* **Antenna Temperature ($T_{ant}$):** 74.3 K
+* **G/T Ratio:** 3.6 dB
+> *Performance figures ($T_{ant}$, G/T) calculated assuming $T_{sky}$ = 27 K and $T_{earth}$ = 1800 K.*
 ## Mounting System (Tripod)
 
 The array system is designed to be mounted on a standard tripod. The connection is made using the 3D printed part **`spearder_mount`** (files available in `/CAD/3d_print`).
