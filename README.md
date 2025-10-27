@@ -59,7 +59,7 @@ The H-frame used to stack the four Yagis is designed for tool-less, rapid deploy
 
 ### Modified 14-Element Yagi
 
-The basic design of the 14-element Yagi is based on the **GTV 70-14m by DG7YBN**.
+The basic design of the 14-element Yagi is based on the **[GTV 70-14m by DG7YBN](https://dg7ybn.de/432MHz/GTV70_14.htm)**.
 
 #### Electrical Design & Boom Correction
 
@@ -95,6 +95,25 @@ In addition to the electrical design, this project introduces significant *mecha
 
 These changes make the antenna elements easier to pack and quicker to assemble in the field without sacrificing performance.
 
+## Bill of Materials (BOM)
+
+This is a partial BOM and will be updated as the project progresses.
+
+| Category | Part | Qty |
+| :---- | :---- | :---- |
+| Yagi Folding Mechanism | Small Double Spring Toggle Latch (No lock hole) | 8 |
+| | Latch Catch A320B-0-2 | 8 |
+| | Iron Gooseneck Hinge 20mm | 16 |
+| | Round Head Blind Rivet M4x5 | 96 |
+| Boom-to-H-Frame Quick Release | Square Tube 2-Way T-Connector 25x25 | 4 |
+| | Wing Bolt M6x30 | 4 |
+| | Wing Nut M6 | 4 |
+| | V-Spring Clip F5mm Single Pin (Hollow), L:37mm H:8mm | 4 |
+| | Round Head Blind Rivet M5x8 | 8 |
+| H-Frame Folding Mechanism | 90-Degree Folding Table Leg Hinge, Mini Size, Right | 2 |
+| | 90-Degree Folding Table Leg Hinge, Mini Size, Left | 2 |
+| | Round Head Blind Rivet M5x6 | 24 |
+
 ## Repository Contents
 
 All design files are located in the `/CAD` directory.
@@ -109,15 +128,16 @@ All design files are located in the `/CAD` directory.
 * **Available Now:**
     * Initial 3D CAD files (`.step`) for all 3D printed parts and aluminum components are available in the `/CAD` directory.
     * Electrical design data (element lengths and positions) are in this README.
+    * A partial Bill of Materials (BOM) is now available.
 * **To Be Added:**
-    * Complete Bill of Materials (BOM) (e.g., specific aluminum pipe sizes, screws, rivets).
+    * Complete Bill of Materials (BOM) (e.g., specific aluminum pipe sizes, screws).
     * Detailed Assembly Instructions & Photos/Videos.
     * Simulation Files (e.g., EZNEC/4nec2).
     * Print-ready `.stl` files (recommended).
 
 ## Acknowledgements
 
-* **DG7YBN** for the original GTV 70-14m antenna design and Boom Correction methodology.
+* **DG7YBN** for the original [GTV 70-14m](https://dg7ybn.de/432MHz/GTV70_14.htm) antenna design and [Boom Correction methodology](https://dg7ybn.de/BC_numbers/BC.htm).
 * **BI1QGX** for the foundational concept of the folding H-frame.
 
 ## License
