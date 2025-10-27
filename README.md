@@ -4,7 +4,7 @@
 
 ---
 
-[中文](/README_zh.md)
+[中文](/README_zh.md) | [Deutsche](/README_de.md) | [日本語](/README_ja.md)
 
 ## Overview
 
