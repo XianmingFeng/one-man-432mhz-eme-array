@@ -4,6 +4,8 @@
 
 ---
 
+[中文](/README_zh.md)
+
 ## Overview
 
 This project provides an open-source design for a 432 MHz (70cm) EME (Earth-Moon-Earth) antenna array. 
