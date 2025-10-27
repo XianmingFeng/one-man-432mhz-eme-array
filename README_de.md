@@ -36,6 +36,7 @@ Bastler sollten in der Lage sein, die gesamte Antenne mit nur den grundlegendste
 * Handbohrmaschine (Pistolenbohrer)
 * Handsäge
 * Handnietzange
+* Rohrbieger
 * 3D-Drucker (Alle erforderlichen `.step`-Dateien finden Sie im Verzeichnis [`/CAD/3d_print`](/CAD/3d_print))
 
 **Ein Hinweis zu 3D-Druckern:** Wir verstehen, dass nicht jeder einen 3D-Drucker besitzt. Jedoch:
@@ -48,6 +49,25 @@ Bastler sollten in der Lage sein, die gesamte Antenne mit nur den grundlegendste
 * **Array-Konfiguration:** 2x2x14-Element-Yagi-Array (Vier 14-Element-Yagis in einem 2x2-Raster gestockt).
 * **Polarisation:** Horizontal.
 * **Stocking-Rahmen:** Benutzerdefinierter H-Rahmen.
+
+## Montagesystem (Stativ)
+
+Das Array-System ist für die Montage auf einem Standard-Stativ ausgelegt. Die Verbindung erfolgt über das 3D-gedruckte Teil **`spearder_mount`** (Dateien verfügbar in `/CAD/3d_print`).
+
+Diese Halterung verbindet den H-Rahmen des Arrays mit der Schnellwechselplatte (QR-Platte) eines Stativkopfes.
+
+**Anforderungen an die Schnellwechselplatte:**
+Das `spearder_mount`-Teil ist vielseitig konzipiert. Es ist kompatibel mit jeder QR-Platte mit Langloch, die diese Kriterien erfüllt:
+* **Länge:** Größer als 80 mm.
+* **Befestigung:** Verwendet einen langen Schlitz für die Schraube (kein einzelnes Loch mit fester Position).
+* **Schraube:** Kompatibel mit einer standardmäßigen 1/4-Zoll (imperial) Stativschraube.
+
+*Als Beispiel verwendet der Autor eine 38 mm breite Arca-Swiss-kompatible QR-Platte in Kombination mit einem Fluid-Videokopf.*
+
+**Stativ-Empfehlung:**
+Es wird dringend empfohlen, ein Stativ mit einer **Mindesthöhe von 1,8 Metern** zu verwenden.
+
+* **Grund:** Ein zu kurzes Stativ führt dazu, dass das hintere Ende des Antennen-Arrays bei der Drehung zu hohen Elevationswinkeln (z. B. beim Verfolgen des Mondes) auf den Boden trifft oder schleift.
 
 ## Designdetails
 
@@ -89,22 +109,46 @@ Eine detaillierte Erklärung zur Boom-Korrektur-Methodik finden Sie auf [DG7YBNs
 #### Mechanische Optimierungen
 
 Zusätzlich zum elektrischen Design führt dieses Projekt signifikante *mechanische* Modifikationen am ursprünglichen Design ein, um es für Tragbarkeit und schnelle Montage zu optimieren. Zu diesen Optimierungen gehören:
-* Neu gestaltete Boom-Segmente.
-* Modifizierte Elementhalterungen.
+* Neu gestaltete Boom-Segmente und Klappscharniere.
 * Ein neues Feedbox-Design.
+* Ein spezielles Element-Befestigungssystem (siehe unten).
 
-Diese Änderungen erleichtern das Verpacken der Antennenelemente und beschleunigen die Montage im Feld, ohne die Leistung zu beeinträchtigen.
+#### Elementhalterung (Das `element_mount`-Teil)
+
+Ein Hauptmerkmal dieses Designs ist die 3D-gedruckte Elementhalterung (`element_mount.step`), die für alle parasitären Elemente (Reflektoren und Direktoren) verwendet wird.
+
+* **Zwei-Schlitz-Design:** Das Teil verfügt über zwei Schlitze. Ein Schlitz hält das Element im Betrieb senkrecht zum Boom. Ein zweiter Schlitz in einem fast senkrechten Winkel dient dazu, das Element in seiner zusammengeklappten (verstauten) Position zu halten.
+* **Störungsfreie Lagerung:** Der "Lager"-Schlitz ist absichtlich um einen kleinen Winkel (den `parking_angle`) versetzt. Dies stellt sicher, dass die Elemente im zusammengeklappten Zustand nicht perfekt parallel zum Boom liegen, wodurch verhindert wird, dass sie mit benachbarten Elementen oder den Köpfen der Befestigungsschrauben kollidieren.
+* **Parametrisches Allzweck-Design:** Diese Elementhalterung ist ein universelles Allzweck-Design, das für viele Yagi-Projekte geeignet ist, die Vierkant-Booms und Rund-Elemente verwenden. Es wurde als eigenes **parametrisches OpenSCAD-Projekt** veröffentlicht.
+
+Für vollständige Details, Parameter (zur Anpassung an Ihre eigene Boomgröße, Elementdurchmesser, Lagerwinkel usw.) und `.scad`-Dateien besuchen Sie bitte das dedizierte Projekt-Repository:
+**[https://github.com/XianmingFeng/yagi_element_mounting](https://github.com/XianmingFeng/yagi_element_mounting)**
 
 ## Stückliste (BOM)
 
 Dies ist eine unvollständige Stückliste und wird im Laufe des Projekts aktualisiert. (Hinweis: Die Teilenamen sind spezifisch und wurden beibehalten.)
 
 | Kategorie | Teil | Menge |
-| :---- | :---- | :---- |
-| Yagi-Klappmechanismus | Kleiner Doppelfeder-Kippverschluss (ohne Schlossloch) | 8 |
+| :--- | :--- | :--- |
+| Yagi-Elemente & Feedbox | `element_mount` 3D-Druckteil | 52 |
+| | Zylinderkopfschraube (Halbgewinde) M3x40 | 52 |
+| | Flügelmutter M3 | 56 |
+| | `feed_box_front` 3D-Druckteil | 4 |
+| | `feed_box_middle` 3D-Druckteil | 4 |
+| | `feed_box_rear` 3D-Druckteil | 4 |
+| | `feed_box_isolator` 3D-Druckteil | 4 |
+| | Linsenkopf-Innensechskantschraube M3x8 | 8 |
+| | Zylinderkopfschraube M3x40 | 4 |
+| | Rändelmutter Messing (Einschmelzmutter) M3x4x5 | 36 |
+| | Zylinderkopfschraube M3x24 | 28 |
+| | Kupfer-Kabelschuh RNB-1.25-4 | 16 |
+| | | |
+| Yagi-Boom-Klappmechanismus | Kleiner Doppelfeder-Kippverschluss (ohne Schlossloch) | 8 |
 | | Verschluss-Gegenhaken A320B-0-2 | 8 |
 | | Eisen-Gänsehalsscharnier 20mm | 16 |
 | | Rundkopf-Blindniete M4x5 | 96 |
+| | `boom_hinge_cap_front` 3D-Druckteil | 8 |
+| | `boom_hinge_cap_rear` 3D-Druckteil | 8 |
 | Boom-zu-H-Rahmen Schnellspanner | Vierkantrohr 2-Wege T-Verbinder 25x25 | 4 |
 | | Flügelschraube M6x30 | 4 |
 | | Flügelmutter M6 | 4 |
@@ -116,12 +160,19 @@ Dies ist eine unvollständige Stückliste und wird im Laufe des Projekts aktuali
 
 ## Inhalt des Repositorys
 
-Alle Designdateien befinden sich im Verzeichnis `/CAD`.
-
-* [`/CAD/3d_print`](/CAD/3d_print): Enthält alle `.step`-Dateien für Teile, die 3D-gedruckt werden müssen (z. B. Bohrschablonen, Halterungen, Feedbox-Teile).
-* [`/CAD/aluminum_pipe`](/CAD/aluminum_pipe): Enthält `.step`-Dateien für die Aluminiumkomponenten (Boom-Abschnitte, Stocking-Rahmen-Teile) als Referenz und zur Bemaßung.
-* `LICENSE`: Die Open-Source-Lizenz des Projekts.
-* `README.md`: Diese Datei.
+* **`/CAD`**: Enthält alle 3D-Modelldateien.
+    * **`/CAD/3d_print`**: Enthält `.step`-Dateien für alle 3D-gedruckten Teile, geordnet nach Komponenten:
+        * `boom_hinge/`: Teile für das Yagi-Boom-Klappscharnier.
+        * `drilling_jig/`: Schablonen für präzises Bohren.
+        * `element_mount/`: Die universelle Halterung für parasitäre Elemente.
+        * `feed_box/`: Teile für die Feedbox des gespeisten Elements.
+        * `spearder_mount/`: Halterung zur Verbindung des H-Rahmens mit einem Stativ.
+    * **`/CAD/aluminum_pipe`**: Enthält `.step`-Dateien für alle Aluminiumrohr-/-Vierkantrohr-Komponenten als Referenz und zur Bemaßung.
+* **`LICENSE`**: Die Open-Source-Lizenz des Projekts.
+* **`README.md`**: Diese Datei (Englisch).
+* **`README_zh.md`**: Chinesische Übersetzung.
+* **`README_de.md`**: Deutsche Übersetzung.
+* **`README_ja.md`**: Japanische Übersetzung.
 
 ## Projektstatus
 

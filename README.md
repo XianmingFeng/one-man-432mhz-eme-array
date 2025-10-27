@@ -162,13 +162,19 @@ This is a partial BOM and will be updated as the project progresses.
 
 ## Repository Contents
 
-All design files are located in the `/CAD` directory.
-
-* [`/CAD/3d_print`](/CAD/3d_print): Contains all `.step` files for parts that need to be 3D printed (e.g., jigs, brackets, feedbox parts).
-* [`/CAD/aluminum_pipe`](/CAD/aluminum_pipe): Contains `.step` files for the aluminum components (boom sections, stacking frame parts) for reference and dimensioning.
-* `LICENSE`: The project's open-source license.
-* `README.md`: This file.
-
+* **`/CAD`**: Contains all 3D model files.
+    * **`/CAD/3d_print`**: Contains `.step` files for all 3D printed parts, organized by component:
+        * `boom_hinge/`: Parts for the Yagi boom folding hinge.
+        * `drilling_jig/`: Jigs for drilling holes accurately.
+        * `element_mount/`: The universal parasitic element mount.
+        * `feed_box/`: Parts for the driven element feedbox.
+        * `spearder_mount/`: Mount for connecting the H-frame to a tripod.
+    * **`/CAD/aluminum_pipe`**: Contains `.step` files for all aluminum tube/pipe components, for reference and dimensioning.
+* **`LICENSE`**: The project's open-source license.
+* **`README.md`**: This file (English).
+* **`README_zh.md`**: Chinese translation.
+* **`README_de.md`**: German translation.
+* **`README_ja.md`**: Japanese translation.
 ## Project Status
 
 * **Available Now:**

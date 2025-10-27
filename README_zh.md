@@ -160,12 +160,19 @@
 
 ## 仓库内容
 
-所有设计文件均位于 `/CAD` 目录下。
-
-* [`/CAD/3d_print`](/CAD/3d_print): 包含所有需要 3D 打印的部件的 `.step` 文件 (例如：钻孔夹具、支架、馈电盒零件)。
-* [`/CAD/aluminum_pipe`](/CAD/aluminum_pipe): G包含铝管部件 (主梁、堆叠框架) 的 `.step` 文件，用于参考和尺寸标注。
-* `LICENSE`: 本项目的开源许可协议。
-* `README.md`: 本 README 文件。
+* **`/CAD`**: 包含所有 3D 模型文件。
+    * **`/CAD/3d_print`**: 包含所有 3D 打印部件的 `.step` 文件，按组件分类：
+        * `boom_hinge/`: 八木主梁折叠铰链零件。
+        * `drilling_jig/`: 用于精确钻孔的夹具。
+        * `element_mount/`: 通用的无源振子安装扣。
+        * `feed_box/`: 激励振子馈电盒零件。
+        * `spearder_mount/`: 连接H形架与三脚架的安装座。
+    * **`/CAD/aluminum_pipe`**: 包含所有铝管/方管部件的 `.step` 文件，用于参考和尺寸标注。
+* **`LICENSE`**: 本项目的开源许可协议。
+* **`README.md`**: 英文版 README (本文)。
+* **`README_zh.md`**: 中文翻译版。
+* **`README_de.md`**: 德文翻译版。
+* **`README_ja.md`**: 日文翻译版。
 
 ## 项目状态
 
