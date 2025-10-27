@@ -131,11 +131,26 @@ For full details, parameters (to adapt it for your own boom size, element diamet
 This is a partial BOM and will be updated as the project progresses.
 
 | Category | Part | Qty |
-| :---- | :---- | :---- |
-| Yagi Folding Mechanism | Small Double Spring Toggle Latch (No lock hole) | 8 |
+| :--- | :--- | :--- |
+| Yagi Elements & Feedbox | `element_mount` 3D Printed Part | 52 |
+| | Socket Head Cap Screw (Half-thread) M3x40 | 52 |
+| | Wing Nut M3 | 56 |
+| | `feed_box_front` 3D Printed Part | 4 |
+| | `feed_box_middle` 3D Printed Part | 4 |
+| | `feed_box_rear` 3D Printed Part | 4 |
+| | `feed_box_isolator` 3D Printed Part | 4 |
+| | Button Head Hex Socket Screw M3x8 | 8 |
+| | Socket Head Cap Screw M3x40 | 4 |
+| | Knurled Brass Nut (Heat-set Insert) M3x4x5 | 36 |
+| | Socket Head Cap Screw M3x24 | 28 |
+| | Copper Terminal Lug RNB-1.25-4 | 16 |
+| | | |
+| Yagi Boom Folding Mechanism | Small Double Spring Toggle Latch (No lock hole) | 8 |
 | | Latch Catch A320B-0-2 | 8 |
 | | Iron Gooseneck Hinge 20mm | 16 |
 | | Round Head Blind Rivet M4x5 | 96 |
+| | `boom_hinge_cap_front` 3D Printed Part | 8 |
+| | `boom_hinge_cap_rear` 3D Printed Part | 8 |
 | Boom-to-H-Frame Quick Release | Square Tube 2-Way T-Connector 25x25 | 4 |
 | | Wing Bolt M6x30 | 4 |
 | | Wing Nut M6 | 4 |
