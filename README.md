@@ -45,6 +45,29 @@ Builders should be able to complete the entire antenna with only the most basic 
 1.  The accessibility and affordability of a home 3D printer are significantly higher than that of a home CNC machine.
 2.  Even if you don't own one, using a 3D printing service is vastly more cost-effective and accessible than commissioning CNC machined parts.
 
+## 3D Printing Guidelines
+
+All 3D printed parts are located in the `/CAD/3d_print` directory.
+
+### General Recommendations
+Most parts function as mechanical components and are under moderate stress. The following general settings are recommended for strength and durability:
+
+* **Material:** PETG (or ABS/ASA for better weather/UV resistance)
+* **Layer Height:** 0.2mm
+* **Wall Thickness:** 4 Layers
+* **Infill Density:** 25% (or higher)
+* **Infill Pattern:** Cross Hatch / Gyroid / or similar strong pattern
+
+### **Critical Instructions**
+**Each 3D print part subdirectory (e.g., `/CAD/3d_print/feed_box/`, `/CAD/3d_print/element_mount/`) now contains its own detailed, multi-lingual `README.md` file.**
+
+You **MUST** read the specific `README.md` file in each part's directory before printing. These files contain essential, part-specific instructions for:
+* Print Orientation
+* Support settings (e.g., which parts require supports and which must not have them)
+* Part-specific hardware (like heat-set inserts)
+
+Failure to follow these part-specific instructions may result in parts that do not fit or function correctly.
+
 ## Technical Specifications
 
 * **Band:** 432 MHz (70cm)
@@ -68,6 +91,7 @@ Builders should be able to complete the entire antenna with only the most basic 
 * **Antenna Temperature ($T_{ant}$):** 74.3 K
 * **G/T Ratio:** 3.6 dB
 > *Performance figures ($T_{ant}$, G/T) calculated assuming $T_{sky}$ = 27 K and $T_{earth}$ = 1800 K.*
+
 ## Mounting System (Tripod)
 
 The array system is designed to be mounted on a standard tripod. The connection is made using the 3D printed part **`spearder_mount`** (files available in `/CAD/3d_print`).
@@ -98,7 +122,6 @@ The H-frame used to stack the four Yagis is designed for tool-less, rapid deploy
 ### Modified 14-Element Yagi
 
 The basic design of the 14-element Yagi is based on the **[GTV 70-14m by DG7YBN](https://dg7ybn.de/432MHz/GTV70_14.htm)**.
-
 #### Electrical Design & Boom Correction
 
 The electrical design adopts the data from DG7YBN and applies a Boom Correction (BC) factor to compensate for the effects of the conductive 20x20x1mm square aluminum boom. The elements are mounted 5mm above the boom (distance from the element's bottom to the boom's top surface).
@@ -179,22 +202,19 @@ This is a partial BOM and will be updated as the project progresses.
 ## Repository Contents
 
 * **`/CAD`**: Contains all 3D model files.
-    * **`/CAD/3d_print`**: Contains `.step` files for all 3D printed parts, organized by component:
-        * `boom_hinge/`: Parts for the Yagi boom folding hinge.
-        * `drilling_jig/`: Jigs for drilling holes accurately.
-        * `element_mount/`: The universal parasitic element mount.
-        * `feed_box/`: Parts for the driven element feedbox.
-        * `spearder_mount/`: Mount for connecting the H-frame to a tripod.
+    * **`/CAD/3d_print`**: Contains `.step` files for all 3D printed parts. Each subdirectory (e.g., `feed_box/`, `element_mount/`) also contains a specific, multi-lingual `README.md` with detailed printing instructions. See the **3D Printing Guidelines** section above.
     * **`/CAD/aluminum_pipe`**: Contains `.step` files for all aluminum tube/pipe components, for reference and dimensioning.
 * **`LICENSE`**: The project's open-source license.
 * **`README.md`**: This file (English).
 * **`README_zh.md`**: Chinese translation.
 * **`README_de.md`**: German translation.
 * **`README_ja.md`**: Japanese translation.
+
 ## Project Status
 
 * **Available Now:**
     * Initial 3D CAD files (`.step`) for all 3D printed parts and aluminum components are available in the `/CAD` directory.
+    * Detailed, part-specific printing instructions are available in each `/CAD/3d_print` subdirectory.
     * Electrical design data (element lengths and positions) are in this README.
     * A partial Bill of Materials (BOM) is now available.
 * **To Be Added:**
@@ -202,7 +222,6 @@ This is a partial BOM and will be updated as the project progresses.
     * Detailed Assembly Instructions & Photos/Videos.
     * Simulation Files (e.g., EZNEC/4nec2).
     * Print-ready `.stl` files (recommended).
-
 ## Acknowledgements
 
 * **DG7YBN** for the original [GTV 70-14m](https://dg7ybn.de/432MHz/GTV70_14.htm) antenna design and [Boom Correction methodology](https://dg7ybn.de/BC_numbers/BC.htm).
