@@ -1,4 +1,4 @@
-# 打印说明 (Printing Instructions)
+# Printing Instructions
 
 [English](#english) | [中文 (Chinese)](#中文-chinese) | [Deutsche (German)](#deutsche-german) | [日本語 (Japanese)](#日本語-japanese)
 
