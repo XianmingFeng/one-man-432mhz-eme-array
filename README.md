@@ -105,22 +105,22 @@ The electrical design adopts the data from DG7YBN and applies a Boom Correction 
 
 The table below shows the original NEC free-space length (FL NEC), the final boom-corrected length (BC), and the required half-length (Half L) for element construction.
 
-| \[mm\] | Diam | Pos Boom | FL NEC | BC | Half L |
-| :---- | :---- | :---- | :---- | :---- | :---- |
-| Refl | 8 | 40 | 328 | 330.7 | 165.35 |
-| DE | 10 | 144.5 | 313.4 | 316.1 | 158.05 |
-| D1 | 8 | 193 | 309 | 311.7 | 155.85 |
-| D2 | 8 | 286 | 304 | 306.7 | 153.35 |
-| D3 | 8 | 468 | 292 | 294.7 | 147.35 |
-| D4 | 8 | 681 | 286 | 288.7 | 144.35 |
-| D5 | 8 | 928 | 282 | 284.7 | 142.35 |
-| D6 | 8 | 1192 | 279 | 281.7 | 140.85 |
-| D7 | 8 | 1477 | 274.5 | 277.2 | 138.6 |
-| D8 | 8 | 1764 | 271 | 273.7 | 136.85 |
-| D9 | 8 | 2054 | 268 | 270.7 | 135.35 |
-| D10 | 8 | 2345 | 266 | 268.7 | 134.35 |
-| D11 | 8 | 2627 | 264 | 266.7 | 133.35 |
-| D12 | 8 | 2860 | 256 | 258.7 | 129.35 |
+| \[mm\] | Diam | Pos Boom | FL NEC | BC    | Half L |
+|:-------|:-----|:---------|:-------|:------|:-------|
+| Refl   | 8    | 40       | 328    | 330.7 | 165.35 |
+| DE     | 10   | 144.5    | 313.4  | 316.1 | 158.05 |
+| D1     | 8    | 193      | 309    | 311.7 | 155.85 |
+| D2     | 8    | 286      | 304    | 306.7 | 153.35 |
+| D3     | 8    | 468      | 292    | 294.7 | 147.35 |
+| D4     | 8    | 681      | 286    | 288.7 | 144.35 |
+| D5     | 8    | 928      | 282    | 284.7 | 142.35 |
+| D6     | 8    | 1192     | 279    | 281.7 | 140.85 |
+| D7     | 8    | 1477     | 274.5  | 277.2 | 138.6  |
+| D8     | 8    | 1764     | 271    | 273.7 | 136.85 |
+| D9     | 8    | 2054     | 268    | 270.7 | 135.35 |
+| D10    | 8    | 2345     | 266    | 268.7 | 134.35 |
+| D11    | 8    | 2627     | 264    | 266.7 | 133.35 |
+| D12    | 8    | 2860     | 256    | 258.7 | 129.35 |
 
 For a detailed explanation of the Boom Correction methodology, please visit [DG7YBN's BC page](https://dg7ybn.de/BC_numbers/BC.htm).
 
@@ -146,35 +146,35 @@ For full details, parameters (to adapt it for your own boom size, element diamet
 
 This is a partial BOM and will be updated as the project progresses.
 
-| Category | Part | Qty |
-| :--- | :--- | :--- |
-| Yagi Elements & Feedbox | `element_mount` 3D Printed Part | 52 |
-| | Socket Head Cap Screw (Half-thread) M3x40 | 52 |
-| | Wing Nut M3 | 56 |
-| | `feed_box_front` 3D Printed Part | 4 |
-| | `feed_box_middle` 3D Printed Part | 4 |
-| | `feed_box_rear` 3D Printed Part | 4 |
-| | `feed_box_isolator` 3D Printed Part | 4 |
-| | Button Head Hex Socket Screw M3x8 | 8 |
-| | Socket Head Cap Screw M3x40 | 4 |
-| | Knurled Brass Nut (Heat-set Insert) M3x4x5 | 36 |
-| | Socket Head Cap Screw M3x24 | 28 |
-| | Copper Terminal Lug RNB-1.25-4 | 16 |
-| | | |
-| Yagi Boom Folding Mechanism | Small Double Spring Toggle Latch (No lock hole) | 8 |
-| | Latch Catch A320B-0-2 | 8 |
-| | Iron Gooseneck Hinge 20mm | 16 |
-| | Round Head Blind Rivet M4x5 | 96 |
-| | `boom_hinge_cap_front` 3D Printed Part | 8 |
-| | `boom_hinge_cap_rear` 3D Printed Part | 8 |
-| Boom-to-H-Frame Quick Release | Square Tube 2-Way T-Connector 25x25 | 4 |
-| | Wing Bolt M6x30 | 4 |
-| | Wing Nut M6 | 4 |
-| | V-Spring Clip F5mm Single Pin (Hollow), L:37mm H:8mm | 4 |
-| | Round Head Blind Rivet M5x8 | 8 |
-| H-Frame Folding Mechanism | 90-Degree Folding Table Leg Hinge, Mini Size, Right | 2 |
-| | 90-Degree Folding Table Leg Hinge, Mini Size, Left | 2 |
-| | Round Head Blind Rivet M5x6 | 24 |
+| Category                      | Part                                                 | Qty |
+|:------------------------------|:-----------------------------------------------------|:----|
+| Yagi Elements & Feedbox       | `element_mount` 3D Printed Part                      | 52  |
+|                               | Socket Head Cap Screw (Half-thread) M3x40            | 52  |
+|                               | Wing Nut M3                                          | 56  |
+|                               | `feed_box_front` 3D Printed Part                     | 4   |
+|                               | `feed_box_middle` 3D Printed Part                    | 4   |
+|                               | `feed_box_rear` 3D Printed Part                      | 4   |
+|                               | `feed_box_isolator` 3D Printed Part                  | 4   |
+|                               | Button Head Hex Socket Screw M3x8                    | 8   |
+|                               | Socket Head Cap Screw M3x40                          | 4   |
+|                               | Knurled Brass Nut (Heat-set Insert) M3x4x5           | 36  |
+|                               | Socket Head Cap Screw M3x24                          | 28  |
+|                               | Copper Terminal Lug RNB-1.25-4                       | 16  |
+|                               |                                                      |     |
+| Yagi Boom Folding Mechanism   | Small Double Spring Toggle Latch (No lock hole)      | 8   |
+|                               | Latch Catch A320B-0-2                                | 8   |
+|                               | Iron Gooseneck Hinge 20mm                            | 16  |
+|                               | Round Head Blind Rivet M4x5                          | 96  |
+|                               | `boom_hinge_cap_front` 3D Printed Part               | 8   |
+|                               | `boom_hinge_cap_rear` 3D Printed Part                | 8   |
+| Boom-to-H-Frame Quick Release | Square Tube 2-Way T-Connector 25x25                  | 4   |
+|                               | Wing Bolt M6x30                                      | 4   |
+|                               | Wing Nut M6                                          | 4   |
+|                               | V-Spring Clip F5mm Single Pin (Hollow), L:37mm H:8mm | 4   |
+|                               | Round Head Blind Rivet M5x8                          | 8   |
+| H-Frame Folding Mechanism     | 90-Degree Folding Table Leg Hinge, Mini Size, Right  | 2   |
+|                               | 90-Degree Folding Table Leg Hinge, Mini Size, Left   | 2   |
+|                               | Round Head Blind Rivet M5x6                          | 24  |
 
 ## Repository Contents
 
