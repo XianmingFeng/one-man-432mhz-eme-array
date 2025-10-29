@@ -4,6 +4,8 @@
 
 ---
 
+[English](/README.md) | [中文](/README_zh.md) | [日本語](/README_ja.md)
+
 ## Übersicht
 
 Dieses Projekt stellt ein Open-Source-Design für ein 432 MHz (70cm) EME (Erde-Mond-Erde) Antennen-Array vor.
@@ -45,12 +47,74 @@ Bastler sollten in der Lage sein, die gesamte Antenne mit nur den grundlegendste
 1.  Die Zugänglichkeit und Erschwinglichkeit eines 3D-Druckers für zu Hause sind deutlich höher als die einer CNC-Maschine.
 2.  Selbst wenn Sie keinen besitzen, ist die Nutzung eines 3D-Druckdienstes weitaus kostengünstiger und zugänglicher als die Beauftragung von CNC-gefertigten Teilen.
 
+## 3D-Druck-Richtlinien
+
+Alle 3D-gedruckten Teile befinden sich im Verzeichnis `/CAD/3d_print`.
+
+### Allgemeine Empfehlungen
+Die meisten Teile fungieren als mechanische Komponenten und sind einer mäßigen Belastung ausgesetzt. Die folgenden allgemeinen Einstellungen werden für Festigkeit und Haltbarkeit empfohlen:
+
+* **Material:** PETG (oder ABS/ASA für bessere Wetter-/UV-Beständigkeit)
+* **Schichthöhe:** 0.2mm
+* **Wandstärke:** 4 Schichten
+* **Fülldichte:** 25% (oder höher)
+* **Füllmuster:** Cross Hatch / Gyroid / oder ähnliches starkes Muster
+
+### **Wichtige Anweisungen**
+**Jedes Unterverzeichnis für 3D-Druckteile (z. B. `/CAD/3d_print/feed_box/`, `/CAD/3d_print/element_mount/`) enthält jetzt eine eigene detaillierte, mehrsprachige `README.md`-Datei.**
+
+Sie **MÜSSEN** die spezifische `README.md`-Datei im Verzeichnis jedes Teils lesen, bevor Sie drucken. Diese Dateien enthalten wichtige, teilespezifische Anweisungen für:
+* Druckausrichtung
+* Stützstruktureinstellungen (z. B. welche Teile Stützstrukturen benötigen und welche nicht)
+* Teilespezifische Hardware (wie Einschmelzmuttern)
+
+Die Nichtbeachtung dieser teilespezifischen Anweisungen kann dazu führen, dass Teile nicht passen oder nicht richtig funktionieren.
+
+## Bearbeitung der Aluminiumrohre
+
+Alle CAD-Dateien für die 6063-Aluminiumlegierungsrohre befinden sich im Verzeichnis `/CAD/aluminum_pipe`. Diese Teile bilden die faltbaren Yagi-Antennenbäume und den Haupt-H-Rahmen.
+
+### Fertigungsmethoden
+* **1. Manuelle (DIY) Bearbeitung:** Teile können von Hand zugeschnitten und gebohrt werden. Bei dieser Methode ist es **UNERLÄSSLICH**, die Bohrschablonen aus dem Verzeichnis `/CAD/3d_print/drilling_jig/` in 3D zu drucken und zu verwenden, um sicherzustellen, dass alle Scharnier- und Riegellöcher korrekt ausgerichtet sind.
+* **2. Professionelle (CNC) Bearbeitung:** Die bereitgestellten `.step`-Dateien sind CAM-fähig und können direkt an einen Bearbeitungsservice zum Laserschneiden oder CNC-Fräsen gesendet werden.
+
+### **Wichtige Anweisungen**
+**Eine detaillierte, mehrsprachige `README.md`-Datei mit einer vollständigen Teileliste, Schnittmaßen und Bohrpositionen befindet sich im Verzeichnis [`/CAD/aluminum_pipe/`](/CAD/aluminum_pipe/).**
+
+Sie **MÜSSEN** diese Datei lesen, bevor Sie Metall schneiden oder bohren. Sie enthält alle notwendigen Spezifikationen für die Yagi-Boom- und H-Rahmen-Komponenten.
+
+## Montageanleitung
+
+Eine Schritt-für-Schritt-Anleitung zur Komponentenfertigung (3D-Druck, Aluminiumbearbeitung), Komponentenvorbereitung (Koaxialkabel) und Teilmontage (Feedboxen) ist jetzt verfügbar.
+
+**Bitte beachten Sie die detaillierte Montageanleitung:**
+**[`/instruction/README.md`](/instruction/README.md)** (Englisch) oder **[`/instruction/README_de.md`](/instruction/README.md)** (Deutsch, falls verfügbar, sonst Englisch verwenden)
+
+Diese Anleitung muss der Reihe nach befolgt werden, da einige Schritte Werkzeuge (Schablonen) für spätere Schritte produzieren. Die Anleitung deckt derzeit die Fertigung und die ersten Teilmontagen ab; die endgültigen Montageschritte werden später hinzugefügt.
+
 ## Technische Daten
 
 * **Band:** 432 MHz (70cm)
 * **Array-Konfiguration:** 2x2x14-Element-Yagi-Array (Vier 14-Element-Yagis in einem 2x2-Raster gestockt).
 * **Polarisation:** Horizontal.
 * **Stocking-Rahmen:** Benutzerdefinierter H-Rahmen.
+
+### Theoretische Leistung (Simuliert)
+
+**Einzelne 14-Element-Yagi:**
+* **Gewinn:** 16.38 dBi
+* **Vor-Rück-Verhältnis:** 33.02 dB
+* **3dB-Öffnungswinkel (Horizontal):** 30.8°
+* **3dB-Öffnungswinkel (Vertikal):** 29.2°
+
+**Vollständiges 2x2-Array:**
+* **Gewinn:** 22.32 dBi
+* **Vor-Rück-Verhältnis:** 33.29 dB
+* **3dB-Öffnungswinkel (Horizontal):** 14°
+* **3dB-Öffnungswinkel (Vertikal):** 13.2°
+* **Antennentemperatur ($T_{ant}$):** 74.3 K
+* **G/T-Verhältnis:** 3.6 dB
+> *Leistungswerte ($T_{ant}$, G/T) berechnet unter Annahme von $T_{sky}$ = 27 K und $T_{earth}$ = 1800 K.*
 
 ## Montagesystem (Stativ)
 
@@ -82,29 +146,28 @@ Der H-Rahmen, der zum Stocken der vier Yagis verwendet wird, ist für einen werk
 ### Modifizierte 14-Element-Yagi
 
 Das Grunddesign der 14-Element-Yagi basiert auf der **[GTV 70-14m von DG7YBN](https://dg7ybn.de/432MHz/GTV70_14.htm)**.
-
 #### Elektrisches Design & Boom-Korrektur
 
 Das elektrische Design übernimmt die Daten von DG7YBN und wendet einen Boom-Korrektur (BC)-Faktor an, um die Auswirkungen des leitenden 20x20x1mm Vierkant-Aluminiumbooms zu kompensieren. Die Elemente sind 5 mm über dem Boom montiert (Abstand von der Unterseite des Elements zur Oberseite des Booms).
 
 Die folgende Tabelle zeigt die ursprüngliche NEC-Freiraumlänge (FL NEC), die endgültige boomkorrigierte Länge (BC) und die erforderliche halbe Länge (Half L) für die Elementkonstruktion.
 
-| \[mm\] | Diam | Pos Boom | FL NEC | BC | Half L |
-| :---- | :---- | :---- | :---- | :---- | :---- |
-| Refl | 8 | 40 | 328 | 330.7 | 165.35 |
-| DE | 10 | 144.5 | 313.4 | 316.1 | 158.05 |
-| D1 | 8 | 193 | 309 | 311.7 | 155.85 |
-| D2 | 8 | 286 | 304 | 306.7 | 153.35 |
-| D3 | 8 | 468 | 292 | 294.7 | 147.35 |
-| D4 | 8 | 681 | 286 | 288.7 | 144.35 |
-| D5 | 8 | 928 | 282 | 284.7 | 142.35 |
-| D6 | 8 | 1192 | 279 | 281.7 | 140.85 |
-| D7 | 8 | 1477 | 274.5 | 277.2 | 138.6 |
-| D8 | 8 | 1764 | 271 | 273.7 | 136.85 |
-| D9 | 8 | 2054 | 268 | 270.7 | 135.35 |
-| D10 | 8 | 2345 | 266 | 268.7 | 134.35 |
-| D11 | 8 | 2627 | 264 | 266.7 | 133.35 |
-| D12 | 8 | 2860 | 256 | 258.7 | 129.35 |
+| \[mm\] | Diam | Pos Boom | FL NEC | BC    | Half L |
+|:-------|:-----|:---------|:-------|:------|:-------|
+| Refl   | 8    | 40       | 328    | 330.7 | 165.35 |
+| DE     | 10   | 144.5    | 313.4  | 316.1 | 158.05 |
+| D1     | 8    | 193      | 309    | 311.7 | 155.85 |
+| D2     | 8    | 286      | 304    | 306.7 | 153.35 |
+| D3     | 8    | 468      | 292    | 294.7 | 147.35 |
+| D4     | 8    | 681      | 286    | 288.7 | 144.35 |
+| D5     | 8    | 928      | 282    | 284.7 | 142.35 |
+| D6     | 8    | 1192     | 279    | 281.7 | 140.85 |
+| D7     | 8    | 1477     | 274.5  | 277.2 | 138.6  |
+| D8     | 8    | 1764     | 271    | 273.7 | 136.85 |
+| D9     | 8    | 2054     | 268    | 270.7 | 135.35 |
+| D10    | 8    | 2345     | 266    | 268.7 | 134.35 |
+| D11    | 8    | 2627     | 264    | 266.7 | 133.35 |
+| D12    | 8    | 2860     | 256    | 258.7 | 129.35 |
 
 Eine detaillierte Erklärung zur Boom-Korrektur-Methodik finden Sie auf [DG7YBNs BC-Seite](https://dg7ybn.de/BC_numbers/BC.htm).
 
@@ -163,28 +226,28 @@ Dies ist eine unvollständige Stückliste und wird im Laufe des Projekts aktuali
 ## Inhalt des Repositorys
 
 * **`/CAD`**: Enthält alle 3D-Modelldateien.
-    * **`/CAD/3d_print`**: Enthält `.step`-Dateien für alle 3D-gedruckten Teile, geordnet nach Komponenten:
-        * `boom_hinge/`: Teile für das Yagi-Boom-Klappscharnier.
-        * `drilling_jig/`: Schablonen für präzises Bohren.
-        * `element_mount/`: Die universelle Halterung für parasitäre Elemente.
-        * `feed_box/`: Teile für die Feedbox des gespeisten Elements.
-        * `spearder_mount/`: Halterung zur Verbindung des H-Rahmens mit einem Stativ.
-    * **`/CAD/aluminum_pipe`**: Enthält `.step`-Dateien für alle Aluminiumrohr-/-Vierkantrohr-Komponenten als Referenz und zur Bemaßung.
-* **`LICENSE`**: Die Open-Source-Lizenz des Projekts.
+    * **`/CAD/3d_print`**: Enthält `.step`-Dateien für alle 3D-gedruckten Teile. Jedes Unterverzeichnis (z. B. `feed_box/`, `element_mount/`) enthält auch eine spezifische, mehrsprachige `README.md`-Datei mit detaillierten Druckanweisungen. Siehe Abschnitt **3D-Druck-Richtlinien** oben.
+    * **`/CAD/aluminum_pipe`**: Enthält `.step`-Dateien für alle Aluminiumrohr-/-Vierkantrohr-Komponenten. Dieses Verzeichnis enthält nun auch eine detaillierte **`README.md`** mit Bearbeitungsanweisungen. Siehe Abschnitt **Bearbeitung der Aluminiumrohre** oben.
+* **`/images`**: Enthält Bilder, die in dieser README verwendet werden.
+* **`/instruction`**: Enthält die detaillierte Schritt-für-Schritt-Montageanleitung (`README.md` und Übersetzungen).
+* **`LICENSE`**: Die Open-Source-Lizenzdatei des Projekts.
 * **`README.md`**: Diese Datei (Englisch).
 * **`README_zh.md`**: Chinesische Übersetzung.
-* **`README_de.md`**: Deutsche Übersetzung.
+* **`README_de.md`**: Deutsche Übersetzung (Diese Datei).
 * **`README_ja.md`**: Japanische Übersetzung.
 
 ## Projektstatus
 
 * **Jetzt verfügbar:**
     * Initiale 3D-CAD-Dateien (`.step`) für alle 3D-gedruckten Teile und Aluminiumkomponenten sind im Verzeichnis `/CAD` verfügbar.
+    * Detaillierte, teilespezifische Druckanweisungen sind in jedem Unterverzeichnis von `/CAD/3d_print` verfügbar.
+    * Detaillierte Bearbeitungsanweisungen für Aluminiumteile sind im Verzeichnis `/CAD/aluminum_pipe/` verfügbar.
+    * Teilweise Montageanleitungen (Fertigung und erste Teilmontagen) sind im Verzeichnis `/instruction/` verfügbar.
     * Elektrische Designdaten (Elementlängen und -positionen) sind in dieser README enthalten.
     * Eine unvollständige Stückliste (BOM) ist jetzt verfügbar.
 * **Wird hinzugefügt:**
     * Vollständige Stückliste (BOM) (z. B. spezifische Aluminiumrohrgrößen, Schrauben).
-    * Detaillierte Montageanleitungen & Fotos/Videos.
+    * Vollständige Montageanleitungen (Endmontage, Phasenleitungen) & Fotos/Videos.
     * Simulationsdateien (z. B. EZNEC/4nec2).
     * Druckfertige `.stl`-Dateien (empfohlen).
 
