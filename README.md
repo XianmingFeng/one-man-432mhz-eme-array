@@ -83,6 +83,15 @@ All CAD files for the 6063 aluminum alloy tubes are located in the `/CAD/aluminu
 
 You **MUST** read this file before cutting or drilling any metal. It contains all necessary specifications for the Yagi booms and H-frame components.
 
+## Assembly Instructions
+
+A step-by-step guide covering component fabrication (3D printing, aluminum machining), component preparation (coax cables), and sub-assembly (feed boxes) is now available.
+
+**Please refer to the detailed Assembly Guide:**
+**[`/instruction/README.md`](/instruction/README.md)**
+
+This guide must be followed in order, as some steps produce tools required for later steps. The guide currently covers fabrication and initial sub-assemblies; final assembly steps will be added later.
+
 ## Technical Specifications
 
 * **Band:** 432 MHz (70cm)
@@ -220,7 +229,8 @@ This is a partial BOM and will be updated as the project progresses.
     * **`/CAD/3d_print`**: Contains `.step` files for all 3D printed parts. Each subdirectory (e.g., `feed_box/`, `element_mount/`) also contains a specific, multi-lingual `README.md` with detailed printing instructions. See the **3D Printing Guidelines** section above.
     * **`/CAD/aluminum_pipe`**: Contains `.step` files for all aluminum tube/pipe components. This directory now also contains a detailed **`README.md`** with machining instructions. See the **Aluminum Pipe Machining** section above.
 * **`/images`**: Contains images used in this README.
-* **`LICENSE`**: The project's open-source license.
+* **`/instruction`**: Contains the detailed step-by-step assembly guide (`README.md` and translations).
+* **`LICENSE`**: The project's open-source license file.
 * **`README.md`**: This file (English).
 * **`README_zh.md`**: Chinese translation.
 * **`README_de.md`**: German translation.
@@ -232,11 +242,12 @@ This is a partial BOM and will be updated as the project progresses.
     * Initial 3D CAD files (`.step`) for all 3D printed parts and aluminum components are available in the `/CAD` directory.
     * Detailed, part-specific printing instructions are available in each `/CAD/3d_print` subdirectory.
     * Detailed machining instructions for aluminum parts are available in the `/CAD/aluminum_pipe/` directory.
+    * Partial assembly instructions (covering fabrication and initial sub-assemblies) are available in the `/instruction/` directory.
     * Electrical design data (element lengths and positions) are in this README.
     * A partial Bill of Materials (BOM) is now available.
 * **To Be Added:**
     * Complete Bill of Materials (BOM) (e.g., specific aluminum pipe sizes, screws).
-    * Detailed Assembly Instructions & Photos/Videos.
+    * Complete Assembly Instructions (final assembly, phasing lines) & Photos/Videos.
     * Simulation Files (e.g., EZNEC/4nec2).
     * Print-ready `.stl` files (recommended).
 ## Acknowledgements
