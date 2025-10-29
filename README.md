@@ -14,6 +14,8 @@ The motivation for this design stems from a personal need: the inability to inst
 
 While traditional EME arrays are often large and permanently installed, this design focuses on achieving the minimum required gain for EME while prioritizing **portability, light weight, and rapid, single-person operation.**
 
+<img src="/images/array-deployed.jpg" width="400">
+
 ## Proven Field Use & Air Travel
 
 This system is not just a concept. Its usability was successfully confirmed during the **VK9QO Christmas Island DXpedition in 2025**.

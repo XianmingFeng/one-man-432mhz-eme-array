@@ -12,6 +12,8 @@ Die Motivation für dieses Design ergibt sich aus einem persönlichen Bedürfnis
 
 Während traditionelle EME-Arrays oft groß und fest installiert sind, konzentriert sich dieses Design darauf, den minimal erforderlichen Gewinn für EME zu erreichen, wobei **Tragbarkeit, geringes Gewicht und schneller Aufbau durch eine Person** im Vordergrund stehen.
 
+<img src="/images/array-deployed.jpg" width="400">
+
 ## Praxiserprobter Einsatz & Flugreisen
 
 Dieses System ist nicht nur ein Konzept. Seine Benutzerfreundlichkeit wurde während der **VK9QO Christmas Island DXpedition im Jahr 2025** erfolgreich bestätigt.
